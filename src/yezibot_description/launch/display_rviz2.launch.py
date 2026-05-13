@@ -43,10 +43,9 @@ def generate_launch_description():
     )
 
     joint_state_publisher_node = Node(
-        package='joint_state_publisher',
-        executable='joint_state_publisher',
+        package='joint_state_publisher_gui',
+        executable='joint_state_publisher_gui',
         output='screen'
-        # 注意：这里不要传 arguments，否则它会去等待 robot_description
     )
 
     rviz2_node = Node(
