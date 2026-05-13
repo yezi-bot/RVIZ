@@ -4,8 +4,11 @@
    <visual>
    <origin xyz="0 0 0.0" rpy="0 0 0"/>
    <geometry>
-     <cylinder radius="0.0" length="0.10"/>
+     <cylinder radius="0.2" length="0.10"/>
    </geometry>
+   <material name='blue'>
+      <color rgba="0.1 0.1 1.0 0.5 "/>
+    </material>
    </visual>
  </link>
 
@@ -13,11 +16,20 @@
     <visual>
     <origin xyz="0 0 0.0" rpy="0 0 0"/>
     <geometry>
-        <cylinder radius="0.0" length="0.0"/>
+        <cylinder radius="0.05" length="0.0"/>
     </geometry>
-    <material name='black'>
+    <material name=''>
        <color rgba="0.0 0.0 0.0 0.8 "/>
     </material>
+    </visual>
+  </link>
+
+  <link name ='imu_link'>
+   <visual>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <geometry>
+        <box size="0.02 0.02 0.02"/>
+    </geometry>
     </visual>
   </link>
 
@@ -28,4 +40,11 @@
         
         
     </joint>
+
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+        <origin xyz="0.0 0.0 0.02"/>
+    </joint>
+
 </robot>

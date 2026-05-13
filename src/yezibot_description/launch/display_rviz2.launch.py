@@ -36,8 +36,8 @@ def generate_launch_description():
 
     # 5. 定义节点
     robot_state_publisher_node = Node(
-        package='joint_state_publisher_gui',
-        executable='joint_state_publisher_gui',
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
         output='screen',
         parameters=[{'robot_description': robot_desc}]
     )
