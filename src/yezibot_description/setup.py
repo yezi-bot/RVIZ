@@ -28,6 +28,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'rotate_yezibot_wheel = yezibot_description.root_wheel:main',
         ],
     },
 )

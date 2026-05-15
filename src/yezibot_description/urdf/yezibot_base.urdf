@@ -1,7 +1,19 @@
 <robot name='yezibot'>
 
   <link name='base_footprint'/>
-  
+
+    
+ <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.12" radius="0.10"/>
+      </geometry>
+      <material name="blue">
+          <color rgba="0.1 0.1 1.0 0.5" /> 
+      </material>
+    </visual>
+  </link>
 
   <link name='laser_link'>
     <visual>
